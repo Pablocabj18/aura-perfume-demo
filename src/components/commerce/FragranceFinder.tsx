@@ -16,8 +16,8 @@ export function FragranceFinder() {
   const matches = useMemo(() => products.filter((product) => (!mood || product.moods.includes(mood)) && (!occasion || product.occasions.includes(occasion))).slice(0,3), [mood, occasion])
   const restart = () => { setMood(''); setOccasion(''); setDone(false) }
   return <section className="finder" id="finder">
-    <div className="finder__visual"><Suspense fallback={<div className="scent-canvas scent-canvas--loading" />}><ScentSculpture /></Suspense><p>Una recomendación basada en notas y ocasiones reales del catálogo.</p></div>
-    <div className="finder__content"><span className="eyebrow">Fragrance Finder</span><h2>Tu próxima fragancia, en dos elecciones.</h2>
+    <div className="finder__visual"><Suspense fallback={<div className="scent-canvas scent-canvas--loading" />}><ScentSculpture /></Suspense><p>Elegí un tipo de aroma y una ocasión.</p></div>
+    <div className="finder__content"><h2>¿Qué perfume buscás?</h2>
       <AnimatePresence mode="wait">{!done ? <motion.div key="questions" initial={{ opacity:0 }} animate={{ opacity:1 }} exit={{ opacity:0 }}>
         <fieldset><legend>¿Qué sensación buscás?</legend><div className="choice-grid">{moods.map((item) => <button className={mood === item ? 'selected' : ''} onClick={() => setMood(item)} key={item}>{mood === item && <Check />} {item}</button>)}</div></fieldset>
         <fieldset><legend>¿Para qué momento?</legend><div className="choice-grid choice-grid--three">{occasions.map((item) => <button className={occasion === item ? 'selected' : ''} onClick={() => setOccasion(item)} key={item}>{occasion === item && <Check />} {item}</button>)}</div></fieldset>

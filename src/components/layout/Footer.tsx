@@ -5,7 +5,7 @@ import { store } from '../../config/store'
 export function Footer() {
   return <footer className="site-footer">
     <div className="footer-main">
-      <div className="footer-brand"><Link to="/" className="brand brand--footer"><strong>{store.name}</strong><span>{store.descriptor}</span></Link><p>Perfumes que se sienten propios.</p></div>
+      <div className="footer-brand"><Link to="/" className="brand brand--footer"><strong>{store.name}</strong><span>{store.descriptor}</span></Link><p>Perfumes, marcas y asesoramiento.</p></div>
       <div><h3>Descubrí</h3><Link to="/catalogo">Todos los perfumes</Link><Link to="/catalogo?genero=Mujer">Mujer</Link><Link to="/catalogo?genero=Hombre">Hombre</Link><Link to="/catalogo?categoria=Arabian">Perfumería árabe</Link></div>
       <div><h3>Ayuda</h3><a href={`https://wa.me/${store.whatsapp}`} target="_blank" rel="noreferrer">WhatsApp <ArrowUpRight /></a><a href="#envios">Envíos y devoluciones</a><a href="#contacto">Contacto</a></div>
       <div className="footer-social"><h3>Seguinos</h3><a href="https://instagram.com" target="_blank" rel="noreferrer"><InstagramLogo /> {store.instagram}</a><a href={`https://wa.me/${store.whatsapp}`} target="_blank" rel="noreferrer"><WhatsappLogo /> Consulta personalizada</a></div>

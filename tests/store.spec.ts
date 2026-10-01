@@ -18,7 +18,7 @@ for (const viewport of [
 
 test('commerce journey works', async ({ page }) => {
   await page.goto('/')
-  await expect(page.getByRole('heading', { name: /Encontrá tu aroma/i })).toBeVisible()
+  await expect(page.getByRole('heading', { name: /Tu próximo perfume/i })).toBeVisible()
   await page.getByRole('button', { name: 'Buscar' }).click()
   await page.getByRole('textbox', { name: 'Buscar' }).fill('Chanel')
   await expect(page.locator('.search-result').filter({ hasText: 'Coco Mademoiselle' })).toBeVisible()
