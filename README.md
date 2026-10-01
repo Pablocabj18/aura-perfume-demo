@@ -1,5 +1,7 @@
 # AURA Parfums & Beauty
 
+Demo pública: https://aura-demo-pablo.web.app
+
 Demo de e-commerce de perfumería construida con React, TypeScript, Vite, Tailwind CSS, Motion y React Three Fiber.
 
 ## Desarrollo

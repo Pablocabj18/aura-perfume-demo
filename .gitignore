@@ -4,5 +4,6 @@ playwright-report
 test-results
 screenshots
 .vite
+.firebase
 *.log
 *.tsbuildinfo
